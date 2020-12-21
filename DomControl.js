@@ -8,11 +8,12 @@ const defaultOct = 4,
 class DomControl {
   constructor() {
     this.ui = createDiv();
-    this.ui.position(width + 20, 0);
+    this.ui.position(width + 25, 10);
     this.colorCheckbox = createCheckbox("Colored", true);
 
+    this.ui.child(createA('https://github.com/Descrout/2D-Terrain-Generator', 'Source Code'));
+    this.ui.child(createP("Drag the screen to move around the noise."));
     this.ui.child(this.colorCheckbox);
-    this.ui.child(createP("Drag the screen to move around the noise"));
 
     this.seedSlider = this.addSlider("Seed", -10000, 10000, 0);
     this.wSlider = this.addSlider("Width", 1, width, defaultW);
